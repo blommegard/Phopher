@@ -1,6 +1,6 @@
 # Phöpher - Simple PHP Console in Cocoa.
 
-This is a simple PHP Console used 
+Phöpher is a free application used to run small PHP-snippets.
 
 ## Features
 
