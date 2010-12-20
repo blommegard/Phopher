@@ -21,6 +21,7 @@
 	[tokenizer.wordState setWordChars:YES from:'$' to:'$'];
 	[tokenizer setTokenizerState:tokenizer.wordState from:'$' to:'$'];
 	[tokenizer.wordState setWordChars:NO from:'\'' to:'\''];
+	[tokenizer.commentState setReportsCommentTokens:YES];
 
 	//Sets..
 	NSSet *flowSet = [NSSet setWithObjects:@"for", @"while", @"if", @"else", @"elseif", @"foreach", @"do", @"return", @"case", @"break", @"switch", nil];
@@ -34,6 +35,7 @@
 	PKToken *tok = nil;
 	
 	while ((tok = [tokenizer nextToken]) != eof) {
+		NSLog(@"%@", [tok debugDescription]);
 		// Quotes..
 		if ([tok isQuotedString])
 			[outString addAttribute:NSForegroundColorAttributeName value:[NSColor redColor] range:NSMakeRange([tok offset], [[tok stringValue] length])];
@@ -49,6 +51,17 @@
 		// Constants
 		if([tok isWord] && [constantsSet containsObject:[[tok stringValue] lowercaseString]])
 			[outString addAttribute:NSForegroundColorAttributeName value:[NSColor yellowColor] range:NSMakeRange([tok offset], [[tok stringValue] length])];
+		// Symbols
+		if([tok isSymbol])
+			[outString addAttribute:NSForegroundColorAttributeName value:[NSColor orangeColor] range:NSMakeRange([tok offset], [[tok stringValue] length])];
+		// Comment
+		if([tok isComment]) {
+//			NSFont *font = [[NSFontManager sharedFontManager]  convertFont:[self font] toHaveTrait:NSItalicFontMask];
+//			[outString addAttribute:NSFontAttributeName value:font range:NSMakeRange([tok offset], [[tok stringValue] length])];
+			
+			[outString addAttribute:NSForegroundColorAttributeName value:[NSColor greenColor] range:NSMakeRange([tok offset], [[tok stringValue] length])];
+		}
+
 	}
 	
 	[[self textStorage] setAttributedString:outString];
