@@ -6,17 +6,14 @@
 //  Copyright 2009 Simon Blommegård. All rights reserved.
 //
 
-#import <ParseKit/ParseKit.h>
-
 #import "Ph_pherAppDelegate.h"
 #import "NoodleLineNumberView.h"
+#import "NSTextView+SBSyntaxHighlight.h"
 
 @interface Ph_pherAppDelegate ()
 
 @property(retain) NSURL *includeFileURL;
 @property BOOL enableIncludeFile;
-
-- (NSAttributedString *)highlightString:(NSString *)string;
 
 @end
 
@@ -44,44 +41,6 @@
 }
 
 #pragma mark -
-
-- (NSAttributedString *)highlightString:(NSString *)string {
-	PKTokenizer *tokenizer = [PKTokenizer tokenizerWithString:string];
-	
-	//Initial conf..
-	[tokenizer.wordState setWordChars:YES from:'$' to:'$'];
-	[tokenizer setTokenizerState:tokenizer.wordState from:'$' to:'$'];
-	[tokenizer.wordState setWordChars:NO from:'\'' to:'\''];
-
-	NSSet *flowSet = [NSSet setWithObjects:@"for", @"while", @"if", @"else", @"elseif", @"foreach", @"do", @"return", @"case", @"break", @"switch", nil];
-	NSSet *constantsSet = [NSSet setWithObjects:@"true", @"false", @"null", nil];
-	
-	PKToken *eof = [PKToken EOFToken];
-	PKToken *tok = nil;
-
-	NSMutableAttributedString *outString = [[NSMutableAttributedString alloc] initWithString:string];
-	[outString addAttribute:NSFontAttributeName value:[NSFont fontWithName:@"Menlo" size:13] range:NSMakeRange(0, [outString length])];
-	
-	while ((tok = [tokenizer nextToken]) != eof) {
-		// Quotes..
-		if ([tok isQuotedString])
-			[outString addAttribute:NSForegroundColorAttributeName value:[NSColor redColor] range:NSMakeRange([tok offset], [[tok stringValue] length])];
-		// Numbers
-		if ([tok isNumber])
-			[outString addAttribute:NSForegroundColorAttributeName value:[NSColor blueColor] range:NSMakeRange([tok offset], [[tok stringValue] length])];		
-		// Variables
-		if ([tok isWord] && [[tok stringValue] hasPrefix:@"$"])
-			[outString addAttribute:NSForegroundColorAttributeName value:[NSColor greenColor] range:NSMakeRange([tok offset], [[tok stringValue] length])];
-		// Stuffs
-		if([tok isWord] && [flowSet containsObject:[[tok stringValue] lowercaseString]])
-			[outString addAttribute:NSForegroundColorAttributeName value:[NSColor brownColor] range:NSMakeRange([tok offset], [[tok stringValue] length])];
-		// Constants
-		if([tok isWord] && [constantsSet containsObject:[[tok stringValue] lowercaseString]])
-			[outString addAttribute:NSForegroundColorAttributeName value:[NSColor yellowColor] range:NSMakeRange([tok offset], [[tok stringValue] length])];
-	}
-	
-	return outString;
-}
 
 - (NSString *)executeCode: (NSString *)code {
 	NSTask *task = [[NSTask alloc] init];
@@ -170,13 +129,8 @@
 
 #pragma mark -
 
-- (void)textDidChange:(NSNotification *)aNotification {
- 	NSArray *selectedRanges = [inputTextContainer selectedRanges];
-	
-	NSAttributedString *s = [self highlightString:[inputTextContainer string]];
-	[[inputTextContainer textStorage] setAttributedString:s];
-	
-	[inputTextContainer setSelectedRanges:selectedRanges];
+- (void)textDidChange:(NSNotification *)aNotification {	
+	[inputTextContainer highlightString];
 }
 
 #pragma mark -

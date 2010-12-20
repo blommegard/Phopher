@@ -17,6 +17,7 @@
 		F4DB776312BEC54E00F8408A /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F43AEE7F12BEC4EF00202B1F /* BWToolkitFramework.framework */; };
 		F4DB77F912BEC81A00F8408A /* ParseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DB77F812BEC81A00F8408A /* ParseKit.framework */; };
 		F4DB77FC12BEC82000F8408A /* ParseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F4DB77F812BEC81A00F8408A /* ParseKit.framework */; };
+		F4DE15A112BF54D90073041E /* NSTextView+SBSyntaxHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = F4DE15A012BF54D90073041E /* NSTextView+SBSyntaxHighlight.m */; };
 		F4E4EF9A10CEF4BD00BDD2C3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4E4EF9910CEF4BD00BDD2C3 /* Credits.rtf */; };
 		F4E4EFAB10CEF83D00BDD2C3 /* Phopher.icns in Resources */ = {isa = PBXBuildFile; fileRef = F4E4EFAA10CEF83D00BDD2C3 /* Phopher.icns */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,8 @@
 		F479E79910CED25C0085AAFE /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoodleLineNumberView.h; path = Classes/NoodleLineNumberView.h; sourceTree = SOURCE_ROOT; };
 		F479E79A10CED25C0085AAFE /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoodleLineNumberView.m; path = Classes/NoodleLineNumberView.m; sourceTree = SOURCE_ROOT; };
 		F4DB77F812BEC81A00F8408A /* ParseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseKit.framework; path = Frameworks/ParseKit.framework; sourceTree = "<group>"; };
+		F4DE159F12BF54D90073041E /* NSTextView+SBSyntaxHighlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTextView+SBSyntaxHighlight.h"; path = "Classes/NSTextView+SBSyntaxHighlight.h"; sourceTree = "<group>"; };
+		F4DE15A012BF54D90073041E /* NSTextView+SBSyntaxHighlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTextView+SBSyntaxHighlight.m"; path = "Classes/NSTextView+SBSyntaxHighlight.m"; sourceTree = "<group>"; };
 		F4E4EF9910CEF4BD00BDD2C3 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		F4E4EFAA10CEF83D00BDD2C3 /* Phopher.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Phopher.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +76,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F4DE159E12BF54940073041E /* Categories */,
 				F479E79910CED25C0085AAFE /* NoodleLineNumberView.h */,
 				F479E79A10CED25C0085AAFE /* NoodleLineNumberView.m */,
 				F479E6E410CEAC090085AAFE /* Ph_pherAppDelegate.h */,
@@ -133,6 +137,15 @@
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F4DE159E12BF54940073041E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F4DE159F12BF54D90073041E /* NSTextView+SBSyntaxHighlight.h */,
+				F4DE15A012BF54D90073041E /* NSTextView+SBSyntaxHighlight.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,6 +219,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				F479E6E610CEAC090085AAFE /* Ph_pherAppDelegate.m in Sources */,
 				F479E79D10CED25C0085AAFE /* NoodleLineNumberView.m in Sources */,
+				F4DE15A112BF54D90073041E /* NSTextView+SBSyntaxHighlight.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
