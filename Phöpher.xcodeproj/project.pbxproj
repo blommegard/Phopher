@@ -11,12 +11,14 @@
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		F43AEE8012BEC4EF00202B1F /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43AEE7F12BEC4EF00202B1F /* BWToolkitFramework.framework */; };
 		F479E6E610CEAC090085AAFE /* Ph_pherAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F479E6E510CEAC090085AAFE /* Ph_pherAppDelegate.m */; };
 		F479E79D10CED25C0085AAFE /* NoodleLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = F479E79A10CED25C0085AAFE /* NoodleLineNumberView.m */; };
+		F4DB776312BEC54E00F8408A /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F43AEE7F12BEC4EF00202B1F /* BWToolkitFramework.framework */; };
+		F4DB77F912BEC81A00F8408A /* ParseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DB77F812BEC81A00F8408A /* ParseKit.framework */; };
+		F4DB77FC12BEC82000F8408A /* ParseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F4DB77F812BEC81A00F8408A /* ParseKit.framework */; };
 		F4E4EF9A10CEF4BD00BDD2C3 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4E4EF9910CEF4BD00BDD2C3 /* Credits.rtf */; };
 		F4E4EFAB10CEF83D00BDD2C3 /* Phopher.icns in Resources */ = {isa = PBXBuildFile; fileRef = F4E4EFAA10CEF83D00BDD2C3 /* Phopher.icns */; };
-		F4F37EA610CD6ED4004F1BC4 /* BWToolkitFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4F37EA510CD6ED4004F1BC4 /* BWToolkitFramework.framework */; };
-		F4F37EB610CD6F31004F1BC4 /* BWToolkitFramework.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F4F37EA510CD6ED4004F1BC4 /* BWToolkitFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,7 +28,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F4F37EB610CD6F31004F1BC4 /* BWToolkitFramework.framework in CopyFiles */,
+				F4DB77FC12BEC82000F8408A /* ParseKit.framework in CopyFiles */,
+				F4DB776312BEC54E00F8408A /* BWToolkitFramework.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,13 +46,14 @@
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		8D1107310486CEB800E47090 /* Ph_pher-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Ph_pher-Info.plist"; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Phöpher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Phöpher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F43AEE7F12BEC4EF00202B1F /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Frameworks/BWToolkitFramework.framework; sourceTree = "<group>"; };
 		F479E6E410CEAC090085AAFE /* Ph_pherAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ph_pherAppDelegate.h; path = Classes/Ph_pherAppDelegate.h; sourceTree = "<group>"; };
 		F479E6E510CEAC090085AAFE /* Ph_pherAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ph_pherAppDelegate.m; path = Classes/Ph_pherAppDelegate.m; sourceTree = "<group>"; };
 		F479E79910CED25C0085AAFE /* NoodleLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoodleLineNumberView.h; path = Classes/NoodleLineNumberView.h; sourceTree = SOURCE_ROOT; };
 		F479E79A10CED25C0085AAFE /* NoodleLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NoodleLineNumberView.m; path = Classes/NoodleLineNumberView.m; sourceTree = SOURCE_ROOT; };
+		F4DB77F812BEC81A00F8408A /* ParseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseKit.framework; path = Frameworks/ParseKit.framework; sourceTree = "<group>"; };
 		F4E4EF9910CEF4BD00BDD2C3 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		F4E4EFAA10CEF83D00BDD2C3 /* Phopher.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Phopher.icns; sourceTree = "<group>"; };
-		F4F37EA510CD6ED4004F1BC4 /* BWToolkitFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BWToolkitFramework.framework; path = Applications/Plugins/BWToolkitFramework.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				F4F37EA610CD6ED4004F1BC4 /* BWToolkitFramework.framework in Frameworks */,
+				F43AEE8012BEC4EF00202B1F /* BWToolkitFramework.framework in Frameworks */,
+				F4DB77F912BEC81A00F8408A /* ParseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,25 +79,6 @@
 				F479E6E510CEAC090085AAFE /* Ph_pherAppDelegate.m */,
 			);
 			name = Classes;
-			sourceTree = "<group>";
-		};
-		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				F4F37EA510CD6ED4004F1BC4 /* BWToolkitFramework.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
-				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
-				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -139,8 +125,12 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
-				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+				F4DB77F812BEC81A00F8408A /* ParseKit.framework */,
+				F43AEE7F12BEC4EF00202B1F /* BWToolkitFramework.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,10 +142,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Phöpher" */;
 			buildPhases = (
+				F4F37EB510CD6F18004F1BC4 /* CopyFiles */,
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				F4F37EB510CD6F18004F1BC4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -177,7 +167,14 @@
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Phöpher" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* Phöpher */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -242,6 +239,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/Applications/Plugins\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -263,6 +261,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_DIR)/Applications/Plugins\"",
+					"\"$(SRCROOT)/Frameworks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

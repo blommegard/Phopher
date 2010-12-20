@@ -10,7 +10,7 @@
 
 @class NoodleLineNumberView;
 
-@interface Ph_pherAppDelegate : NSObject <NSApplicationDelegate, NSPathControlDelegate> {
+@interface Ph_pherAppDelegate : NSObject <NSApplicationDelegate, NSPathControlDelegate, NSTextViewDelegate> {
     NSWindow *window;
 	
 	IBOutlet NSTextView *inputTextContainer;
